@@ -1,0 +1,19 @@
+apiVersion: kustomize.toolkit.fluxcd.io/v1
+kind: Kustomization
+metadata:
+  name: multus-cni
+  namespace: flux-system
+spec:
+  interval: 1m
+  path: ../apps/multus-cni
+  prune: true
+  sourceRef:
+    kind: GitRepository
+    name: seshat-multus-platform-source
+   # name: flux-system
+  
+  # targetNamespace: flux-system
+  # decryption:
+  #   provider: sops
+  #   secretRef:
+  #     name: sops-age
