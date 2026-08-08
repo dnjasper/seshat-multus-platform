@@ -9,8 +9,7 @@ spec:
   prune: true
   sourceRef:
     kind: GitRepository
-    name: seshat-multus-platform-source
-   # name: flux-system
+    name: flux-system
   
   # targetNamespace: flux-system
   # decryption:
