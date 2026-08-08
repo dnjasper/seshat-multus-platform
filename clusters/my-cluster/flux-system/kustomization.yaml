@@ -9,7 +9,7 @@ spec:
   prune: true
   sourceRef:
     kind: GitRepository
-    name: multus-cni-source
+    name: seshat-multus-platform-source
    # name: flux-system
   
   # targetNamespace: flux-system
