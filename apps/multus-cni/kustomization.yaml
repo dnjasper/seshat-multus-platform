@@ -6,7 +6,7 @@ resources:
   - clusterrole.yaml
   - clusterrolebinding.yaml
   - namespace.yaml
-  - gitrepo.yaml
+  #- gitrepo.yaml
   - daemonsets.yaml
   - netattach.yaml
   - serviceaccount.yaml
