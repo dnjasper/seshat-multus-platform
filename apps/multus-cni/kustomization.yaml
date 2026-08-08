@@ -8,5 +8,5 @@ resources:
   #- gitrepo.yaml
   - daemonsets.yaml
   - netattach.yaml
-  - serviceaccount.yaml
+
   - configmap.yaml
