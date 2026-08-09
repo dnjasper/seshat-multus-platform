@@ -14,6 +14,7 @@ rules:
       - pods
       - pods/status
     verbs:
+      - create
       - get
       - list
       - update
