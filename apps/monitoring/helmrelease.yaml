@@ -8,7 +8,7 @@ spec:
   interval: 10m
   chart:
     spec:
-      chart: kube-prometheus-stack
+      chart: kube-prometheus-stack # try again
       version: ">=57.0.0"
       sourceRef:
         kind: HelmRepository
