@@ -2,7 +2,7 @@ apiVersion: "k8s.cni.cncf.io/v1"
 kind: NetworkAttachmentDefinition
 metadata:
   name: telco-data-plane
-  namespace: default      # <-- Allows your upcoming Repo 3 pods to find it instantly
+  namespace: default      
 spec:
   config: '{
       "cniVersion": "0.3.1",
