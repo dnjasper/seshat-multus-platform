@@ -3,3 +3,4 @@ kind: Kustomization
 resources:
   - ippool-crd.yaml
   - overlappingrange.yaml
+  - whereabouts-daemonset.yaml
