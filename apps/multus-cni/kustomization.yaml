@@ -12,4 +12,4 @@ resources:
   - daemonsets.yaml
   - netattach.yaml
   - nad.yaml
-  - configmap.yaml
+  - configmap.yaml  # I hope this works
