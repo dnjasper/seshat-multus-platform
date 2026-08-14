@@ -4,7 +4,6 @@ resources:
   - ../monitoring
   - ../vdu-bridge
   - ../whereabouts/crds
-  - ippool-crd.yaml
   - serviceaccount.yaml
   - clusterrole.yaml
   - clusterrolebinding.yaml
