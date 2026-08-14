@@ -12431,7 +12431,7 @@ spec:
         kubernetes.io/os: linux
       securityContext:
         fsGroup: 1337
-      serviceAccountName: image-automation-controller
+      serviceAccountName: image-automation-controller # i hope this works
       terminationGracePeriodSeconds: 10
       volumes:
       - emptyDir: {}
