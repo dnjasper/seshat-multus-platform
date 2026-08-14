@@ -7,12 +7,12 @@ spec:
   config: '{
       "cniVersion": "0.3.1",
       "name": "telco-data-plane",
-      "type": "ipvlan",   # <-- Crucial AWS EKS compatibility choice
-      "master": "eth0",   # <-- Links directly to your physical EC2 network card
-      "mode": "l2",       # <-- Layer 2 bridging for maximum throughput
+      "type": "ipvlan",   
+      "master": "eth0",   
+      "mode": "l2",       
       "ipam": {
-        "type": "whereabouts",     # <-- Activates your cluster-wide IP manager
-        "range": "192.168.100.0/24" # <-- The isolated subnet you designated for telco data
+        "type": "whereabouts",     
+        "range": "192.168.100.0/24" 
       }
     }'
 # Use code with caution.Push the Configuration LiveSave that file inside your apps/multus/ folder next to your repository and release files. Drop into your WSL Ubuntu terminal and run the git push sequence to fire the payload up to your cluster:bashgit add .
