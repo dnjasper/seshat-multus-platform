@@ -4,7 +4,7 @@ metadata:
   name: multus
   namespace: multus-system
   labels:
-    release: monitoring-monitoring
+    release: monitoring-monitoring  # I hope this works
 spec:
   selector:
     matchLabels:
