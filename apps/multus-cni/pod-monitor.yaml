@@ -1,0 +1,14 @@
+apiVersion: monitoring.coreos.com/v1
+kind: PodMonitor
+metadata:
+  name: multus
+  namespace: multus-system
+  labels:
+    release: monitoring-monitoring
+spec:
+  selector:
+    matchLabels:
+      app: multus
+  podMetricsEndpoints:
+    - port: metrics
+      path: /metrics
