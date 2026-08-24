@@ -16,6 +16,6 @@ data:
         "cniConfigDir": "/host/etc/cni/net.d",
         "multusAutoconfigDir": "/host/etc/cni/net.d",
         "multusConfigFile": "auto",
-        "socketDir": "/host/run/multus/"
+        "socketDir": "/host/run/multus/",
         "metricsPort": 8080
     }
