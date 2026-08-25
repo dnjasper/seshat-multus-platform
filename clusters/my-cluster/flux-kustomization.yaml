@@ -9,7 +9,6 @@ spec:
   prune: true
   dependsOn:
   - name: monitoring
-    kind: Kustomization
     namespace: flux-system
   sourceRef:
     kind: GitRepository
