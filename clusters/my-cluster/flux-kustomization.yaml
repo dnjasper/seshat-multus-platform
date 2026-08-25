@@ -8,9 +8,9 @@ spec:
   interval: 1m
   path: ../../apps/multus-cni
   prune: true
-  dependsOn:
-  - name: monitoring
-    namespace: flux-system
+  # dependsOn:
+  # - name: monitoring
+  #   namespace: flux-system
   sourceRef:
     kind: GitRepository
     name: flux-system
