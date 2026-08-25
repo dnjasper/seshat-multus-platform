@@ -7,6 +7,10 @@ spec:
   interval: 1m
   path: ../../apps/multus-cni
   prune: true
+  dependsOn:
+  - name: monitoring
+    kind: Kustomization
+    namespace: flux-system
   sourceRef:
     kind: GitRepository
     name: flux-system
