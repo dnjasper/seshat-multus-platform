@@ -13,4 +13,4 @@ resources:
   - netattach.yaml
   - nad.yaml
   - configmap.yaml  
-  - pod-monitor.yaml
+ # - pod-monitor.yaml
