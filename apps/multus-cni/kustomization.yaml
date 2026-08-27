@@ -13,4 +13,5 @@ resources:
   - netattach.yaml
   - nad.yaml
   - configmap.yaml  
+  - prometheus-rule.yaml
  # - pod-monitor.yaml
