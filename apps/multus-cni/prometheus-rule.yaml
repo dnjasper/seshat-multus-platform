@@ -1,0 +1,18 @@
+apiVersion: ://coreos.com
+kind: PrometheusRule
+metadata:
+  name: telco-network-alerts
+  namespace: multus-system
+  labels:
+    release: monitoring-monitoring 
+spec:
+  groups:
+  - name: telco-data-plane
+    rules:
+    - alert: TelcoUserPlaneInterfaceDown
+      expr: node_network_up{device=~"ens[6-7]"} == 0
+      for: 2m 
+      labels:
+        severity: critical
+        tier: infrastructure
+      
