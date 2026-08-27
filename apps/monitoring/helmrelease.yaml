@@ -23,3 +23,7 @@ spec:
     grafana:
       adminUser: admin
       adminPassword: "Ng7z6aR3StB397KItOUar2U9P0EghLqBvuYOlgZd"
+
+    prometheus:
+      prometheusSpec:
+        ruleNamespaceSelector: {}
