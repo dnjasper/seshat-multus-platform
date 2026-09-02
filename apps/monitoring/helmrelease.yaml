@@ -26,4 +26,13 @@ spec:
 
     prometheus:
       prometheusSpec:
-        ruleNamespaceSelector: false
+        ruleNamespaceSelector: {}
+        ruleSelector:
+          matchLabels:
+            release: monitoring-monitoring
+        
+        podMonitorNamespaceSelector: {}
+        podMonitorSelector:
+          matchLabels:
+            release: monitoring-monitoring
+        podMonitorSelectorNilUsesHelmValues: false
