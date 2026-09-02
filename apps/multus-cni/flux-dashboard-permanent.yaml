@@ -8,144 +8,75 @@ metadata:
 stringData:
   flux-dashboard.json: |
     {
-        "kind": "Panel",
-        "spec": {
+      "id": null,
+      "uid": "flux-control-plane",
+      "title": "Flux Control Plane Metrics",
+      "tags": ["flux", "infrastructure"],
+      "style": "dark",
+      "timezone": "browser",
+      "editable": true,
+      "hideControls": false,
+      "graphTooltip": 1,
+      "panels": [
+        {
+          "type": "timeseries",
           "id": 21,
           "title": "Kubernetes API Requests",
-          "description": "",
-          "links": [],
-          "data": {
-            "kind": "QueryGroup",
-            "spec": {
-              "queries": [
-                {
-                  "kind": "PanelQuery",
-                  "spec": {
-                    "query": {
-                      "kind": "DataQuery",
-                      "version": "v0",
-                      "group": "prometheus",
-                      "datasource": {
-                        "name": "prometheus"
-                      },
-                      "spec": {
-                        "editorMode": "code",
-                        "expr": "sum(rate(rest_client_requests_total{namespace=\"$namespace\",cluster=~\"$cluster\"}[1m]))",
-                        "interval": "",
-                        "legendFormat": "total",
-                        "range": true
-                      }
-                    },
-                    "refId": "A",
-                    "hidden": false
-                  }
-                },
-                {
-                  "kind": "PanelQuery",
-                  "spec": {
-                    "query": {
-                      "kind": "DataQuery",
-                      "version": "v0",
-                      "group": "prometheus",
-                      "datasource": {
-                        "name": "prometheus"
-                      },
-                      "spec": {
-                        "editorMode": "code",
-                        "expr": "sum(rate(rest_client_requests_total{namespace=\"$namespace\",code!~\"2..\",cluster=~\"$cluster\"}[1m]))",
-                        "interval": "",
-                        "legendFormat": "errors",
-                        "range": true
-                      }
-                    },
-                    "refId": "B",
-                    "hidden": false
-                  }
-                }
-              ],
-              "transformations": [],
-              "queryOptions": {}
+          "gridPos": {
+            "h": 8,
+            "w": 24,
+            "x": 0,
+            "y": 0
+          },
+          "targets": [
+            {
+              "refId": "A",
+              "datasource": {
+                "type": "prometheus",
+                "uid": "prometheus"
+              },
+              "expr": "sum(rate(rest_client_requests_total{namespace=\"$namespace\",cluster=~\"$cluster\"}[1m]))",
+              "legendFormat": "Total Requests",
+              "editorMode": "code",
+              "range": true
+            },
+            {
+              "refId": "B",
+              "datasource": {
+                "type": "prometheus",
+                "uid": "prometheus"
+              },
+              "expr": "sum(rate(rest_client_requests_total{namespace=\"$namespace\",code!~\"2..\",cluster=~\"$cluster\"}[1m]))",
+              "legendFormat": "API Errors",
+              "editorMode": "code",
+              "range": true
+            }
+          ],
+          "fieldConfig": {
+            "defaults": {
+              "custom": {
+                "drawStyle": "line",
+                "lineInterpolation": "linear",
+                "lineWidth": 2,
+                "fillOpacity": 10
+              },
+              "unit": "short"
             }
           },
-          "vizConfig": {
-            "kind": "VizConfig",
-            "group": "timeseries",
-            "version": "13.2.0",
-            "spec": {
-              "options": {
-                "tooltip": {
-                  "mode": "multi",
-                  "sort": "none",
-                  "hideZeros": false
-                },
-                "legend": {
-                  "showLegend": true,
-                  "displayMode": "table",
-                  "placement": "bottom",
-                  "calcs": [
-                    "mean",
-                    "lastNotNull"
-                  ]
-                },
-                "alertThreshold": true
-              },
-              "fieldConfig": {
-                "defaults": {
-                  "custom": {
-                    "drawStyle": "line",
-                    "lineInterpolation": "linear",
-                    "barAlignment": 0,
-                    "barWidthFactor": 0.6,
-                    "lineWidth": 1,
-                    "fillOpacity": 10,
-                    "gradientMode": "none",
-                    "spanNulls": false,
-                    "insertNulls": false,
-                    "showPoints": "never",
-                    "showValues": false,
-                    "pointSize": 5,
-                    "stacking": {
-                      "mode": "none",
-                      "group": "A"
-                    },
-                    "axisPlacement": "auto",
-                    "axisLabel": "",
-                    "axisColorMode": "text",
-                    "axisBorderShow": false,
-                    "scaleDistribution": {
-                      "type": "linear"
-                    },
-                    "axisCenteredZero": false,
-                    "hideFrom": {
-                      "tooltip": false,
-                      "viz": false,
-                      "legend": false
-                    },
-                    "thresholdsStyle": {
-                      "mode": "off"
-                    }
-                  },
-                  "color": {
-                    "mode": "palette-classic"
-                  },
-                  "thresholds": {
-                    "mode": "absolute",
-                    "steps": [
-                      {
-                        "value": null,
-                        "color": "green"
-                      },
-                      {
-                        "value": 80,
-                        "color": "red"
-                      }
-                    ]
-                  },
-                  "unit": "short"
-                },
-                "overrides": []
-              }
+          "options": {
+            "tooltip": {
+              "mode": "multi"
+            },
+            "legend": {
+              "showLegend": true,
+              "displayMode": "table",
+              "placement": "bottom",
+              "calcs": ["mean", "lastNotNull"]
             }
           }
         }
-      }
+      ],
+      "refresh": "10s",
+      "schemaVersion": 39,
+      "version": 1
+    }
