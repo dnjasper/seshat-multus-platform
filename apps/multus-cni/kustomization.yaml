@@ -14,4 +14,12 @@ resources:
   - nad.yaml
   - configmap.yaml  
  # - pod-monitor.yaml
-  - flux-dashboard-permanent.yaml
+ # - flux-dashboard-permanent.yaml
+
+configMapGenerator:
+  - name: flux-control-plane-dashboard
+    files:
+      - flux-dashboard.json
+    options:
+      labels:
+        grafana_dashboard: "1"
