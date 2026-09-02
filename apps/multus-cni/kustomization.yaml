@@ -14,4 +14,4 @@ resources:
   - nad.yaml
   - configmap.yaml  
  # - pod-monitor.yaml
- # - flux-dashboard-permanent.yaml
+  - flux-dashboard-permanent.yaml
