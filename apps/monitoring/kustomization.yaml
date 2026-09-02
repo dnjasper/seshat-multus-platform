@@ -5,3 +5,4 @@ resources:
   - helmrelease.yaml
   - monitoring.yaml
 #  - serviceaccount.yaml
+  - flux-dashboard-permanent.yaml
