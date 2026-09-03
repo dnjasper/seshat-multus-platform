@@ -20,10 +20,18 @@ generatorOptions:
   disableNameSuffixHash: true
 
 configMapGenerator:
+  - name: flux-cluster-dashboard
+    namespace: monitoring
+    files:
+      - cluster.json
+    options:
+      labels:
+        grafana_dashboard: "1"
+        
   - name: flux-control-plane-dashboard
     namespace: monitoring
     files:
-      - flux-dashboard.json
+      - control-plane.json
     options:
       labels:
         grafana_dashboard: "1"
