@@ -788,7 +788,7 @@
               "__name__": 1,
               "container": 2,
               "customresource_group": 5,
-              "customresource_kind": 6,
+              "kind": 6,
               "customresource_version": 7,
               "endpoint": 8,
               "exported_namespace": 4,
