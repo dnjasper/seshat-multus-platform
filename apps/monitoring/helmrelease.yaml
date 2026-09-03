@@ -39,8 +39,8 @@ spec:
 
     kube-state-metrics:
       enabled: true
-      collectors:
-        - customresourcedefinitions
+      # collectors:
+      #   - customresourcedefinitions
       metricAllowlist:
         - "nodes,pods,services,deployments,replicasets,statefulsets,namespaces,endpoints"
         - "gotk_resource_info"
