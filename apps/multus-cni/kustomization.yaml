@@ -13,8 +13,7 @@ resources:
   - netattach.yaml
   - nad.yaml
   - configmap.yaml  
- # - pod-monitor.yaml
- # - flux-dashboard-permanent.yaml
+
 
 generatorOptions:
   disableNameSuffixHash: true
