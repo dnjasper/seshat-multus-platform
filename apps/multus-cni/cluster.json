@@ -741,7 +741,7 @@
           },
           "editorMode": "code",
           "exemplar": true,
-          "expr": "count(gotk_reconcile_duration_seconds_count{namespace=~\"$namespace\"})",
+          "expr": "gotk_reconcile_duration_seconds_count{namespace=~\"$namespace\"}",
           "format": "table",
           "instant": true,
           "interval": "",
