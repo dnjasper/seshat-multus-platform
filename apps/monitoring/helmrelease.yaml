@@ -31,12 +31,12 @@ spec:
           matchLabels:
             release: monitoring-monitoring
         
-        podMonitorNamespaceSelector: 
-          any: true
-        podMonitorSelector: 
-          matchLabels:
-            release: monitoring-monitoring
-        podMonitorSelectorNilUsesHelmValues: false
+      podMonitorNamespaceSelector: 
+        any: true
+      podMonitorSelector: 
+        matchLabels:
+          release: monitoring-monitoring
+      podMonitorSelectorNilUsesHelmValues: false
 
     kube-state-metrics:
       enabled: true
