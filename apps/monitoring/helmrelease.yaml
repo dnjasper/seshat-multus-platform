@@ -36,3 +36,12 @@ spec:
           matchLabels:
             release: monitoring-monitoring
         podMonitorSelectorNilUsesHelmValues: false
+
+    kube-state-metrics:
+      enabled: true
+      collectors:
+        - customresourcedefinitions
+      metricAllowlist:
+        - "nodes,pods,services,deployments,replicasets,statefulsets,namespaces,endpoints"
+        - "gotk_resource_info"
+        - "gotk_reconcile_duration_seconds"
