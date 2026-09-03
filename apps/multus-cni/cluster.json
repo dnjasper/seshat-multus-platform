@@ -231,7 +231,7 @@
           },
           "editorMode": "code",
           "exemplar": false,
-          "expr": "count(gotk_reconcile_duration_seconds_count{exported_namespace=~\"$namespace\", customresource_kind=~\"GitRepository|HelmRepository|Bucket|OCIRepository\"})",
+          "expr": "count(gotk_reconcile_duration_seconds_count{namespace=~\"$namespace\", kind=~\"GitRepository|HelmRepository|Bucket|OCIRepository\"})",
           "instant": true,
           "interval": "",
           "legendFormat": "",
