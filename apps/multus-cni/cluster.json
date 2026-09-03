@@ -742,7 +742,7 @@
           "editorMode": "code",
           "exemplar": true,
           "expr": "gotk_reconcile_duration_seconds_count{namespace=~\"$namespace\", kind=~\"GitRepository|HelmRepository|Bucket|OCIRepository\"}",
-          "format": "table",
+          "format": "time_series",
           "instant": true,
           "interval": "",
           "legendFormat": "",
