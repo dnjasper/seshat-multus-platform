@@ -741,7 +741,7 @@
           },
           "editorMode": "code",
           "exemplar": true,
-          "expr": "gotk_reconcile_duration_seconds_count{exported_namespace=~\"$namespace\", customresource_kind=~\"GitRepository|HelmRepository|Bucket|OCIRepository\"}",
+          "expr": "gotk_reconcile_duration_seconds_count{namespace=~\"$namespace\", kind=~\"GitRepository|HelmRepository|Bucket|OCIRepository\"}",
           "format": "table",
           "instant": true,
           "interval": "",
