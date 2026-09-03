@@ -741,7 +741,7 @@
           },
           "editorMode": "code",
           "exemplar": true,
-          "expr": "gotk_reconcile_duration_seconds_count{namespace=~\"$namespace\", kind=~\"GitRepository|HelmRepository|Bucket|OCIRepository\"}",
+          "expr": "count(gotk_reconcile_duration_seconds_count{namespace=~\"$namespace\", kind=~\"GitRepository|HelmRepository|Bucket|OCIRepository\"})",
           "format": "time_series",
           "instant": true,
           "interval": "",
