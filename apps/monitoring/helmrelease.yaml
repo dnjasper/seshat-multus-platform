@@ -31,8 +31,9 @@ spec:
           matchLabels:
             release: monitoring-monitoring
         
-        podMonitorNamespaceSelector: {}
-        podMonitorSelector:
+        podMonitorNamespaceSelector: 
+          any: true
+        podMonitorSelector: 
           matchLabels:
             release: monitoring-monitoring
         podMonitorSelectorNilUsesHelmValues: false
