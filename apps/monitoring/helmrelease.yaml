@@ -32,7 +32,8 @@ spec:
             release: monitoring-monitoring
         
         podMonitorNamespaceSelector: 
-          any: true
+          matchExpressions: []
+          
         podMonitorSelector: 
           matchLabels:
             release: monitoring-monitoring
