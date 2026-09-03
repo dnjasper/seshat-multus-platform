@@ -16,6 +16,9 @@ resources:
  # - pod-monitor.yaml
  # - flux-dashboard-permanent.yaml
 
+generatorOptions:
+  disableNameSuffixHash: true
+
 configMapGenerator:
   - name: flux-control-plane-dashboard
     namespace: monitoring
