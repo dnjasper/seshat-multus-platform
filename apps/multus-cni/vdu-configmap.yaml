@@ -7,4 +7,26 @@ metadata:
     grafana_dashboard: "1"
 data:
   vdu-errors.json: |-
-    {"annotations":{"list":[{"builtIn":1,"datasource":{"type":"grafana","uid":"-- Graphics --"},"enable":true,"hide":true,"name":"Annotations & Alerts","type":"dashboard"}]},"editable":true,"fiscalYearStartMonth":0,"graphTooltip":0,"id":null,"links":[],"liveNow":false,"panels":[{"datasource":{"type":"prometheus"},"fieldConfig":{"defaults":{"color":{"mode":"thresholds"},"custom":{"axisBorderShow":false,"axisCenteredZero":false,"axisColorMode":"text","axisLabel":"","axisPlacement":"auto","barAlignment":0,"drawStyle":"line","fillOpacity":10,"gradientMode":"none","hideFrom":{"legend":false,"tooltip":false,"viz":false},"lineInterpolation":"linear","lineWidth":1,"pointSize":5,"scaleDistribution":{"type":"linear"},"showPoints":"auto","spanNulls":false,"stacking":{"group":"A","mode":"none"},"thresholdsStyle":{"mode":"off"}},"overrides":[]},"gridPos":{"h":10,"w":24,"x":0,"y":0},"id":1,"options":{"legend":{"calcs":[],"displayMode":"list","placement":"bottom","showLegend":true},"tooltip":{"mode":"single","sort":"none"}},"targets":[{"datasource":{"type":"prometheus"},"editorMode":"code","expr":"sum(rate(container_network_transmit_errors_total{pod=~\"seshat-vdu.*\"}[2m])) by (pod)","legendFormat":"{{pod}} - TX Errors/sec","range":true,"refId":"A"}],"title":"vDU Container Network Errors (Rate)","type":"timeseries"}],"refresh":"","schemaVersion":39,"tags":["vdu","telco"],"time":{"from":"now-1h","to":"now"},"timepicker":{},"timezone":"","title":"Unified Telco Operations","uid":"unified-telco-ops","version":1}
+    {
+      "id": null,
+      "title": "Unified Telco Operations",
+      "tags": ["vdu", "telco"],
+      "timezone": "browser",
+      "schemaVersion": 36,
+      "version": 1,
+      "panels": [
+        {
+          "type": "timeseries",
+          "title": "vDU Container Network Errors (Rate)",
+          "gridPos": { "h": 8, "w": 24, "x": 0, "y": 0 },
+          "id": 1,
+          "targets": [
+            {
+              "expr": "sum(rate(container_network_transmit_errors_total{pod=~\"seshat-vdu.*\"}[2m])) by (pod)",
+              "refId": "A",
+              "datasource": { "type": "prometheus" }
+            }
+          ]
+        }
+      ]
+    }
