@@ -13,6 +13,7 @@ resources:
   - netattach.yaml
   - nad.yaml
   - configmap.yaml  
+  - vdu-configmap.yaml
 
 
 generatorOptions:
