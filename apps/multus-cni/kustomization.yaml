@@ -12,6 +12,7 @@ resources:
   - daemonsets.yaml
   - netattach.yaml
   - nad-N3.yaml
+  - nad-N6.yaml
   - configmap.yaml  
   - vdu-configmap.yaml
 
