@@ -1,7 +1,7 @@
 apiVersion: "k8s.cni.cncf.io/v1"
 kind: NetworkAttachmentDefinition
 metadata:
-  name: telco-N6-plane
+  name: telco-n6-plane
   namespace: default      
 spec:
   config: '{
