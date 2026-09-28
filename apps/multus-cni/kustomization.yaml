@@ -3,6 +3,7 @@ kind: Kustomization
 resources:
   - ../monitoring
   - ../vdu-bridge
+  - ../upf-bridge
   - ../whereabouts/crds
   - serviceaccount.yaml
   - clusterrole.yaml
