@@ -13,10 +13,10 @@ spec:
       "mode": "l2",
       "ipam": {
         "type": "host-local",
-        "subnet": "10.0.3.0/24",
-        "rangeStart": "10.0.3.150",
-        "rangeEnd": "10.0.3.200"
+        "subnet": "10.0.2.0/24",
+        "rangeStart": "10.0.2.150",
+        "rangeEnd": "10.0.2.200"
       }
     }
   ]
-
+}'
