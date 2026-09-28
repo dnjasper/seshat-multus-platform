@@ -11,7 +11,7 @@ resources:
   #- gitrepo.yaml
   - daemonsets.yaml
   - netattach.yaml
-  - nad.yaml
+  - nad-N3.yaml
   - configmap.yaml  
   - vdu-configmap.yaml
 
