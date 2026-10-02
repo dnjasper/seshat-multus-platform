@@ -1,12 +1,15 @@
 apiVersion: kustomize.toolkit.fluxcd.io/v1
 kind: Kustomization
 metadata:
-  name: upf-app-delivery
+  name: open5gs-core-delivery
   namespace: flux-system
 spec:
   interval: 5m
-  path: ./apps/upf
+  path: ./apps/open5gs-core
   prune: true
+
+  dependsOn:
+  - name: upf-app-delivery
   sourceRef:
     kind: GitRepository
     name: workload-repo-source
