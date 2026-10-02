@@ -4,6 +4,7 @@ resources:
   - ../monitoring
   - ../vdu-bridge
   - ../upf-bridge
+  - ../open5gs-bridge
   - ../whereabouts/crds
   - serviceaccount.yaml
   - clusterrole.yaml
