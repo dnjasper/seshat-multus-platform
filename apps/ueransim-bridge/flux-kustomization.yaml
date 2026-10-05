@@ -5,7 +5,7 @@ metadata:
   namespace: flux-system
 spec:
   interval: 5m
-  path: ./apps/ueransim-bridge
+  path: ./apps/ueransim
   prune: true
   sourceRef:
     kind: GitRepository
