@@ -6,6 +6,7 @@ resources:
   - ../upf-bridge
   - ../open5gs-bridge
   - ../ueransim-bridge
+  - ../n6-gateway-bridge
   - ../whereabouts/crds
   - serviceaccount.yaml
   - clusterrole.yaml
