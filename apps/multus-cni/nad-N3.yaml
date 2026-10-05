@@ -12,8 +12,8 @@ spec:
       "mode": "l2",       
       "ipam": {
         "type": "whereabouts",     
-        "range": "10.0.2.0/24",
-        "range_start": "10.0.2.20",
-        "range_end": "10.0.2.100"
+        "range": "192.168.100.0/24",
+        "range_start": "192.168.100.20",
+        "range_end": "192.168.100.100"
       }
     }'
