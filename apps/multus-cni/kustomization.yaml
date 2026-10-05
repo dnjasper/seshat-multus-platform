@@ -5,6 +5,7 @@ resources:
   - ../vdu-bridge
   - ../upf-bridge
   - ../open5gs-bridge
+  - ../ueransim-bridge
   - ../whereabouts/crds
   - serviceaccount.yaml
   - clusterrole.yaml

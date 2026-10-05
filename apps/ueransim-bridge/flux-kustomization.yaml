@@ -1,0 +1,12 @@
+apiVersion: kustomize.toolkit.fluxcd.io/v1
+kind: Kustomization
+metadata:
+  name: ueransim-delivery
+  namespace: flux-system
+spec:
+  interval: 5m
+  path: ./apps/ueransim-bridge
+  prune: true
+  sourceRef:
+    kind: GitRepository
+    name: workload-repo-source

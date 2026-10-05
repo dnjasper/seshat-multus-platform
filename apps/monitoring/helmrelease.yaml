@@ -2,18 +2,18 @@ apiVersion: helm.toolkit.fluxcd.io/v2
 kind: HelmRelease
 metadata:
   name: monitoring
-  namespace: monitoring # ◄ Drops the release wrapper where Flux has admin rights
+  namespace: monitoring 
 spec:
   targetNamespace: monitoring # ◄ Crucial: This still throws the actual pods into monitoring!
   interval: 10m
   chart:
     spec:
-      chart: kube-prometheus-stack # try again
+      chart: kube-prometheus-stack 
       version: ">=57.0.0"
       sourceRef:
         kind: HelmRepository
         name: prometheus-community
-        namespace: monitoring # ◄ Points to the admin-level source repo
+        namespace: monitoring # 
   install:
     createNamespace: false
     timeout: 15m
